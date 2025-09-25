@@ -1,0 +1,315 @@
+# vsim -vopt work.top -voptargs="+acc=npr" -assertdebug -l simulation.log -coverage -c -do "coverage save -onexit -assert -directive -cvg -codeAll coverage.ucdb; run -all; exit" 
+# Start time: 10:14:44 on Sep 25,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "master_bridge(fast)".
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.apb_intf(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.apb_pkg(fast)
+# Loading work.top(fast)
+# Loading work.apb_intf(fast)
+# Loading work.APB_Protocol(fast)
+# Loading work.master_bridge(fast)
+# Loading work.slave1(fast)
+# Loading work.slave2(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
+# coverage save -onexit -assert -directive -cvg -codeAll coverage.ucdb
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test apb_regression_test...
+# UVM_INFO apb_driver.sv(24) @ 0: uvm_test_top.env.act_agt.drv [apb_driver] @(0                   0) transfer = 0 | reset = 1 | read_write = 0 | write_addr = 287 | read_addr = 293 | wdata =  80
+# ** Info: PCLK is toggling
+#    Time: 5 ns Started: 5 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# UVM_INFO apb_monitor.sv(72) @ 15: uvm_test_top.env.pass_agt.pass_mon [apb_passive_monitor] | SEQUENCE MONITORED | READ_WRITE = 0 | apb_read_paddr = 0 |
+# UVM_INFO apb_monitor.sv(32) @ 15: uvm_test_top.env.act_agt.act_mon [apb_active_monitor] | SEQUENCE DRIVEN active_monitor @(15) READ_WRITE = 0 | apb_write_paddr = 287 | apb_write_data = 80 | 
+# 
+# 
+# ------------------------------------------------------------------------------
+#                 PRESETn = 1 and transfer = 0 is applied for latched state (state == IDLE)  
+# ------------------------------------------------------------------------------
+# transfer = 0 | reset = 1 | read_write = 0 | write_addr = 287 | read_addr = 293 | wdata =  80 | rdata =   0 | pslverr = 0
+# @ 15 : PRESETn = 1 | Transfer = 0 | apb_read_data_out =   0 | PSLVERR = 0
+#                 TEST FAILED @ 15                                
+# ------------------------------------------------------------------------------
+# 
+# 
+# Total number of transactions = 1
+# Matches = 0
+# Mismatches = 1
+# ** Info: PCLK is toggling
+#    Time: 15 ns Started: 15 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# UVM_INFO apb_driver.sv(24) @ 25: uvm_test_top.env.act_agt.drv [apb_driver] @(0                  25) transfer = 0 | reset = 1 | read_write = 1 | write_addr = 276 | read_addr = 287 | wdata =   8
+# ** Info: PCLK is toggling
+#    Time: 25 ns Started: 25 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# ** Info: PCLK is toggling
+#    Time: 35 ns Started: 35 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# UVM_INFO apb_monitor.sv(32) @ 45: uvm_test_top.env.act_agt.act_mon [apb_active_monitor] | SEQUENCE DRIVEN active_monitor @(45) READ_WRITE = 1 | apb_write_paddr = 276 | apb_write_data = 8 | 
+# UVM_INFO apb_monitor.sv(72) @ 45: uvm_test_top.env.pass_agt.pass_mon [apb_passive_monitor] | SEQUENCE MONITORED | READ_WRITE = 0 | apb_read_paddr = 0 |
+# 
+# 
+# ------------------------------------------------------------------------------
+#                 PRESETn = 1 and transfer = 0 is applied for latched state (state == IDLE)  
+# ------------------------------------------------------------------------------
+# transfer = 0 | reset = 1 | read_write = 1 | write_addr = 276 | read_addr = 287 | wdata =   8 | rdata =   0 | pslverr = 0
+# @ 45 : PRESETn = 1 | Transfer = 0 | apb_read_data_out =   0 | PSLVERR = 0
+#                 TEST PASSED @ 45                             
+# ------------------------------------------------------------------------------
+# 
+# 
+# Total number of transactions = 2
+# Matches = 1
+# Mismatches = 1
+# ** Info: PCLK is toggling
+#    Time: 45 ns Started: 45 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# UVM_INFO apb_driver.sv(24) @ 55: uvm_test_top.env.act_agt.drv [apb_driver] @(0                  55) transfer = 0 | reset = 1 | read_write = 0 | write_addr = 267 | read_addr = 198 | wdata =   0
+# ** Info: PCLK is toggling
+#    Time: 55 ns Started: 55 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# ** Info: PCLK is toggling
+#    Time: 65 ns Started: 65 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# UVM_INFO apb_monitor.sv(72) @ 75: uvm_test_top.env.pass_agt.pass_mon [apb_passive_monitor] | SEQUENCE MONITORED | READ_WRITE = 0 | apb_read_paddr = 0 |
+# UVM_INFO apb_monitor.sv(32) @ 75: uvm_test_top.env.act_agt.act_mon [apb_active_monitor] | SEQUENCE DRIVEN active_monitor @(75) READ_WRITE = 0 | apb_write_paddr = 267 | apb_write_data = 0 | 
+# 
+# 
+# ------------------------------------------------------------------------------
+#                 PRESETn = 1 and transfer = 0 is applied for latched state (state == IDLE)  
+# ------------------------------------------------------------------------------
+# transfer = 0 | reset = 1 | read_write = 0 | write_addr = 267 | read_addr = 198 | wdata =   0 | rdata =   0 | pslverr = 0
+# @ 75 : PRESETn = 1 | Transfer = 0 | apb_read_data_out =   0 | PSLVERR = 0
+#                 TEST PASSED @ 75                             
+# ------------------------------------------------------------------------------
+# 
+# 
+# Total number of transactions = 3
+# Matches = 2
+# Mismatches = 1
+# ** Info: PCLK is toggling
+#    Time: 75 ns Started: 75 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# UVM_INFO apb_driver.sv(24) @ 85: uvm_test_top.env.act_agt.drv [apb_driver] @(0                  85) transfer = 0 | reset = 1 | read_write = 1 | write_addr = 502 | read_addr = 267 | wdata = 190
+# ** Info: PCLK is toggling
+#    Time: 85 ns Started: 85 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# ** Info: PCLK is toggling
+#    Time: 95 ns Started: 95 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# UVM_INFO apb_monitor.sv(32) @ 105: uvm_test_top.env.act_agt.act_mon [apb_active_monitor] | SEQUENCE DRIVEN active_monitor @(105) READ_WRITE = 1 | apb_write_paddr = 502 | apb_write_data = 190 | 
+# UVM_INFO apb_monitor.sv(72) @ 105: uvm_test_top.env.pass_agt.pass_mon [apb_passive_monitor] | SEQUENCE MONITORED | READ_WRITE = 0 | apb_read_paddr = 0 |
+# 
+# 
+# ------------------------------------------------------------------------------
+#                 PRESETn = 1 and transfer = 0 is applied for latched state (state == IDLE)  
+# ------------------------------------------------------------------------------
+# transfer = 0 | reset = 1 | read_write = 1 | write_addr = 502 | read_addr = 267 | wdata = 190 | rdata =   0 | pslverr = 0
+# @ 105 : PRESETn = 1 | Transfer = 0 | apb_read_data_out =   0 | PSLVERR = 0
+#                 TEST PASSED @ 105                             
+# ------------------------------------------------------------------------------
+# 
+# 
+# Total number of transactions = 4
+# Matches = 3
+# Mismatches = 1
+# ** Info: PCLK is toggling
+#    Time: 105 ns Started: 105 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# UVM_INFO apb_driver.sv(24) @ 115: uvm_test_top.env.act_agt.drv [apb_driver] @(0                 115) transfer = 0 | reset = 1 | read_write = 0 | write_addr = 279 | read_addr =  80 | wdata = 236
+# ** Info: PCLK is toggling
+#    Time: 115 ns Started: 115 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# ** Info: PCLK is toggling
+#    Time: 125 ns Started: 125 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# UVM_INFO apb_monitor.sv(72) @ 135: uvm_test_top.env.pass_agt.pass_mon [apb_passive_monitor] | SEQUENCE MONITORED | READ_WRITE = 0 | apb_read_paddr = 0 |
+# UVM_INFO apb_monitor.sv(32) @ 135: uvm_test_top.env.act_agt.act_mon [apb_active_monitor] | SEQUENCE DRIVEN active_monitor @(135) READ_WRITE = 0 | apb_write_paddr = 279 | apb_write_data = 236 | 
+# 
+# 
+# ------------------------------------------------------------------------------
+#                 PRESETn = 1 and transfer = 0 is applied for latched state (state == IDLE)  
+# ------------------------------------------------------------------------------
+# transfer = 0 | reset = 1 | read_write = 0 | write_addr = 279 | read_addr =  80 | wdata = 236 | rdata =   0 | pslverr = 0
+# @ 135 : PRESETn = 1 | Transfer = 0 | apb_read_data_out =   0 | PSLVERR = 0
+#                 TEST PASSED @ 135                             
+# ------------------------------------------------------------------------------
+# 
+# 
+# Total number of transactions = 5
+# Matches = 4
+# Mismatches = 1
+# ** Info: PCLK is toggling
+#    Time: 135 ns Started: 135 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# UVM_INFO apb_driver.sv(24) @ 145: uvm_test_top.env.act_agt.drv [apb_driver] @(0                 145) transfer = 0 | reset = 1 | read_write = 1 | write_addr = 339 | read_addr = 279 | wdata = 200
+# ** Info: PCLK is toggling
+#    Time: 145 ns Started: 145 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# ** Info: PCLK is toggling
+#    Time: 155 ns Started: 155 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# UVM_INFO apb_monitor.sv(32) @ 165: uvm_test_top.env.act_agt.act_mon [apb_active_monitor] | SEQUENCE DRIVEN active_monitor @(165) READ_WRITE = 1 | apb_write_paddr = 339 | apb_write_data = 200 | 
+# UVM_INFO apb_monitor.sv(72) @ 165: uvm_test_top.env.pass_agt.pass_mon [apb_passive_monitor] | SEQUENCE MONITORED | READ_WRITE = 0 | apb_read_paddr = 0 |
+# 
+# 
+# ------------------------------------------------------------------------------
+#                 PRESETn = 1 and transfer = 0 is applied for latched state (state == IDLE)  
+# ------------------------------------------------------------------------------
+# transfer = 0 | reset = 1 | read_write = 1 | write_addr = 339 | read_addr = 279 | wdata = 200 | rdata =   0 | pslverr = 0
+# @ 165 : PRESETn = 1 | Transfer = 0 | apb_read_data_out =   0 | PSLVERR = 0
+#                 TEST PASSED @ 165                             
+# ------------------------------------------------------------------------------
+# 
+# 
+# Total number of transactions = 6
+# Matches = 5
+# Mismatches = 1
+# ** Info: PCLK is toggling
+#    Time: 165 ns Started: 165 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# UVM_INFO apb_driver.sv(24) @ 175: uvm_test_top.env.act_agt.drv [apb_driver] @(0                 175) transfer = 0 | reset = 1 | read_write = 0 | write_addr = 281 | read_addr = 446 | wdata = 168
+# ** Info: PCLK is toggling
+#    Time: 175 ns Started: 175 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# ** Info: PCLK is toggling
+#    Time: 185 ns Started: 185 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# UVM_INFO apb_monitor.sv(72) @ 195: uvm_test_top.env.pass_agt.pass_mon [apb_passive_monitor] | SEQUENCE MONITORED | READ_WRITE = 0 | apb_read_paddr = 0 |
+# UVM_INFO apb_monitor.sv(32) @ 195: uvm_test_top.env.act_agt.act_mon [apb_active_monitor] | SEQUENCE DRIVEN active_monitor @(195) READ_WRITE = 0 | apb_write_paddr = 281 | apb_write_data = 168 | 
+# 
+# 
+# ------------------------------------------------------------------------------
+#                 PRESETn = 1 and transfer = 0 is applied for latched state (state == IDLE)  
+# ------------------------------------------------------------------------------
+# transfer = 0 | reset = 1 | read_write = 0 | write_addr = 281 | read_addr = 446 | wdata = 168 | rdata =   0 | pslverr = 0
+# @ 195 : PRESETn = 1 | Transfer = 0 | apb_read_data_out =   0 | PSLVERR = 0
+#                 TEST PASSED @ 195                             
+# ------------------------------------------------------------------------------
+# 
+# 
+# Total number of transactions = 7
+# Matches = 6
+# Mismatches = 1
+# ** Info: PCLK is toggling
+#    Time: 195 ns Started: 195 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# UVM_INFO apb_driver.sv(24) @ 205: uvm_test_top.env.act_agt.drv [apb_driver] @(0                 205) transfer = 0 | reset = 1 | read_write = 1 | write_addr = 358 | read_addr = 281 | wdata =  75
+# ** Info: PCLK is toggling
+#    Time: 205 ns Started: 205 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# ** Info: PCLK is toggling
+#    Time: 215 ns Started: 215 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# UVM_INFO apb_monitor.sv(32) @ 225: uvm_test_top.env.act_agt.act_mon [apb_active_monitor] | SEQUENCE DRIVEN active_monitor @(225) READ_WRITE = 1 | apb_write_paddr = 358 | apb_write_data = 75 | 
+# UVM_INFO apb_monitor.sv(72) @ 225: uvm_test_top.env.pass_agt.pass_mon [apb_passive_monitor] | SEQUENCE MONITORED | READ_WRITE = 0 | apb_read_paddr = 0 |
+# 
+# 
+# ------------------------------------------------------------------------------
+#                 PRESETn = 1 and transfer = 0 is applied for latched state (state == IDLE)  
+# ------------------------------------------------------------------------------
+# transfer = 0 | reset = 1 | read_write = 1 | write_addr = 358 | read_addr = 281 | wdata =  75 | rdata =   0 | pslverr = 0
+# @ 225 : PRESETn = 1 | Transfer = 0 | apb_read_data_out =   0 | PSLVERR = 0
+#                 TEST PASSED @ 225                             
+# ------------------------------------------------------------------------------
+# 
+# 
+# Total number of transactions = 8
+# Matches = 7
+# Mismatches = 1
+# ** Info: PCLK is toggling
+#    Time: 225 ns Started: 225 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# UVM_INFO apb_driver.sv(24) @ 235: uvm_test_top.env.act_agt.drv [apb_driver] @(0                 235) transfer = 0 | reset = 1 | read_write = 0 | write_addr = 312 | read_addr = 309 | wdata = 142
+# ** Info: PCLK is toggling
+#    Time: 235 ns Started: 235 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# ** Info: PCLK is toggling
+#    Time: 245 ns Started: 245 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# UVM_INFO apb_monitor.sv(72) @ 255: uvm_test_top.env.pass_agt.pass_mon [apb_passive_monitor] | SEQUENCE MONITORED | READ_WRITE = 0 | apb_read_paddr = 0 |
+# UVM_INFO apb_monitor.sv(32) @ 255: uvm_test_top.env.act_agt.act_mon [apb_active_monitor] | SEQUENCE DRIVEN active_monitor @(255) READ_WRITE = 0 | apb_write_paddr = 312 | apb_write_data = 142 | 
+# 
+# 
+# ------------------------------------------------------------------------------
+#                 PRESETn = 1 and transfer = 0 is applied for latched state (state == IDLE)  
+# ------------------------------------------------------------------------------
+# transfer = 0 | reset = 1 | read_write = 0 | write_addr = 312 | read_addr = 309 | wdata = 142 | rdata =   0 | pslverr = 0
+# @ 255 : PRESETn = 1 | Transfer = 0 | apb_read_data_out =   0 | PSLVERR = 0
+#                 TEST PASSED @ 255                             
+# ------------------------------------------------------------------------------
+# 
+# 
+# Total number of transactions = 9
+# Matches = 8
+# Mismatches = 1
+# ** Info: PCLK is toggling
+#    Time: 255 ns Started: 255 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# UVM_INFO apb_driver.sv(24) @ 265: uvm_test_top.env.act_agt.drv [apb_driver] @(0                 265) transfer = 0 | reset = 1 | read_write = 1 | write_addr =  54 | read_addr = 312 | wdata = 130
+# ** Info: PCLK is toggling
+#    Time: 265 ns Started: 265 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# ** Info: PCLK is toggling
+#    Time: 275 ns Started: 275 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# UVM_INFO apb_monitor.sv(32) @ 285: uvm_test_top.env.act_agt.act_mon [apb_active_monitor] | SEQUENCE DRIVEN active_monitor @(285) READ_WRITE = 1 | apb_write_paddr = 54 | apb_write_data = 130 | 
+# UVM_INFO apb_monitor.sv(72) @ 285: uvm_test_top.env.pass_agt.pass_mon [apb_passive_monitor] | SEQUENCE MONITORED | READ_WRITE = 0 | apb_read_paddr = 0 |
+# 
+# 
+# ------------------------------------------------------------------------------
+#                 PRESETn = 1 and transfer = 0 is applied for latched state (state == IDLE)  
+# ------------------------------------------------------------------------------
+# transfer = 0 | reset = 1 | read_write = 1 | write_addr =  54 | read_addr = 312 | wdata = 130 | rdata =   0 | pslverr = 0
+# @ 285 : PRESETn = 1 | Transfer = 0 | apb_read_data_out =   0 | PSLVERR = 0
+#                 TEST PASSED @ 285                             
+# ------------------------------------------------------------------------------
+# 
+# 
+# Total number of transactions = 10
+# Matches = 9
+# Mismatches = 1
+# ** Info: PCLK is toggling
+#    Time: 285 ns Started: 285 ns  Scope: top.intf File: apb_interface.sv Line: 36
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 295: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# ------------------------- INPUT-COVERAGE ------------------------------
+# 
+#  !!!! INPUT COVERAGE = 75.00 % !!!!
+# 
+# ------------------------- INPUT-COVERAGE ------------------------------
+# 
+# ------------------------- OUPTUT-COVERAGE ------------------------------
+# 
+#  !!!! OUTPUT COVERAGE = 75.00 % !!!!
+# 
+# ------------------------- OUTPUT-COVERAGE ------------------------------
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   34
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [apb_active_monitor]    10
+# [apb_driver]    10
+# [apb_passive_monitor]    10
+# ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 295 ns  Iteration: 54  Instance: /top
+# Saving coverage database on exit...
+# End time: 10:14:54 on Sep 25,2025, Elapsed time: 0:00:10
+# Errors: 0, Warnings: 0
